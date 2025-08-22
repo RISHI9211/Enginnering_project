@@ -30,7 +30,7 @@ This project integrates the Internet of Things (IoT) with a web-site to enable u
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/Rajbipul/Engineering-Practicum.git
+   git clone [https://github.com/RISHI9211/Enginnering_project.git]
 2. **Configure:**
    Razorpay: Obtain and integrate your Razorpay credentials.
    WhatsApp API: [If applicable] Obtain and integrate WhatsApp API credentials.
