@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vending Machine</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+</head>
+<body>
+  <div class="container">
+    <h2>Vending Machine</h2>
+    <script src="/static/js/quantity.js?v=2" defer></script>
+
+    <div class="product-row">
+      <img src="/static/assets/takatak.jpg" alt="Taka tak" class="product-image">
+      <div class="product-name">Taka Tak</div>
+      <div class="product-price">Rs 20</div>
+      <div class="product-quantity">
+        <button class="quantity-button" onclick="changeQuantity(this, -1)">-</button>
+        <input type="number" id="item1" class="quantity-input" value="0" min="0" data-price="35" readonly>
+        <button class="quantity-button" onclick="changeQuantity(this, 1)">+</button>
+      </div>
+    </div>
+    
+    <div class="product-row">
+      <img src="/static/assets/lays.jpg" alt="Snack Bar" class="product-image">
+      <div class="product-name">Blue Lays</div>
+      <div class="product-price">Rs 20</div>
+      <div class="product-quantity">
+        <button class="quantity-button" onclick="changeQuantity(this, -1)">-</button>
+        <input type="number" id="item2" class="quantity-input" value="0" min="0" data-price="50" readonly>
+        <button class="quantity-button" onclick="changeQuantity(this, 1)">+</button>
+      </div>
+    </div>
+    
+    <div class="product-row">
+      <img src="/static/assets/greenlays.jpg" alt="Chips" class="product-image">
+      <div class="product-name">Chile Limon Lays</div>
+      <div class="product-price">Rs 20</div>
+      <div class="product-quantity">
+        <button class="quantity-button" onclick="changeQuantity(this, -1)">-</button>
+        <input type="number" id="item3" class="quantity-input" value="0" min="0" data-price="20" readonly>
+        <button class="quantity-button" onclick="changeQuantity(this, 1)">+</button>
+      </div>
+    </div>
+
+    <div class="user-info">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+      <label for="phone">Mobile Number</label>
+      <input type="text" id="phone" placeholder="Enter your mobile number" required>
+    </div>
+
+    <div>
+      <h2>Order Summary</h2>
+      <p><strong>Total Price:</strong> Rs <span id="total-price">0.00</span></p>
+    </div>
+    <script src="/static/js/payment.js?v=2" defer></script>
+
+    <button class="pay-button" onclick="goToPayment()">Proceed to Payment</button>
+  </div>
+</body>
+</html>
